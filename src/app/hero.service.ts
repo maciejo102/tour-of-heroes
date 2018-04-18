@@ -8,9 +8,13 @@ import { of } from 'rxjs/observable/of';
 @Injectable()
 export class HeroService {
 
+  GetHero(id: number): Observable<Hero> {
+    this.messageService.WriteMessage(`Hero with id = ${id} fetched.`);
+    return of(HEROES.find(hero => hero.id === id));
+  }
   constructor(private messageService: MessageService) { }
 
-  getHero(): Observable<Hero[]> {
+  GetHeroes(): Observable<Hero[]> {
     this.messageService.WriteMessage('Heroes fetched.');
     return of(HEROES);
   }

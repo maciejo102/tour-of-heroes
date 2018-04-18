@@ -1,8 +1,9 @@
-<h2>Tour of Heroes</h2>
 <div>
-  <ul class="heroes-list">
-    <li *ngFor="let hero of heroes" 
-    (click)=""
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <a routerLink="/details/{{hero.id}}">
+  <span class="badge">{{hero.id}}</span>{{hero.name}}
+</a>
+  </li>
   </ul>
-
 </div>
