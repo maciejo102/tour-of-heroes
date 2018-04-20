@@ -8,7 +8,7 @@ export class MessageService {
 
   constructor() { }
 
-  WriteMessage(message: string): void {
+  AddMessage(message: string): void {
     this.messages.push(message);
   }
 
