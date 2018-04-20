@@ -13,7 +13,6 @@ import { MessagesComponent } from './messages/messages.component';
 import { DetailsViewComponent } from './details-view/details-view.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { InMemoryDataService }  from './in-memory-data.service';
 
 
 
@@ -28,11 +27,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false}
-    )
+    AppRoutingModule
   ],
   providers: [HeroService, MessageService],
   bootstrap: [AppComponent]
